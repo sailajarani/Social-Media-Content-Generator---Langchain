@@ -46,8 +46,3 @@ This project helps you automatically create social media content for LinkedIn an
 - `.env`: Stores your API keys and model names (not included in version control).
 - `README.md`: This guide.
 
-## Notes
-
-- You do not need to know anything about AI or technical jargon to use this project.
-- Just provide a topic, and the script does the rest.
-- The output is ready to copy and post on
