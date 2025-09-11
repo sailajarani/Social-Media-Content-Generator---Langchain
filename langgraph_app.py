@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from langgraph.graph import StateGraph, END
-from langchain_openai import ChatOpenAI
+#from langchain_openai import ChatOpenAI
 #from langchain_anthropic import ChatAnthropic
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.tools import DuckDuckGoSearchRun
@@ -15,8 +15,8 @@ from typing import TypedDict, Annotated
 
 # Initialize models
 linkedin_model = ChatOpenAI(
-    model=os.environ.get("OPENAI_MODEL", "gpt-4o"),
-    api_key=os.environ.get("OPENAI_API_KEY")
+    model=os.environ.get("GOOGLE_GENAI_MODEL", "gemini-pro"),
+    google_api_key=os.environ.get("GOOGLE_API_KEY")
 )
 
 instagram_model = ChatGoogleGenerativeAI(
@@ -185,4 +185,5 @@ if __name__ == "__main__":
     result = generate_social_media_posts(topic)
     print("Generated Social Media Posts:")
     print("=" * 50)
+
     print(result)
